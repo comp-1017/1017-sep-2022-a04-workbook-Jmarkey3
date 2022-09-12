@@ -26,8 +26,101 @@
 -->
 
 <h1>Basic Html Tags</h1>
+<h3>Paragraph Tag</h3>
 <p>This page demonstrates the basic structure of an html web page. The head area has the browse title tab specified as well as the charset defined. 
     The body is demonstrating the h1 header tag and the paragraph tag. </p>
     <p>Second paragraph</p>
+     <!--
+        If you wish to use a component of a reserved tag (or the whole tag)
+        you would be in trouble using the tag. Instead you can use special
+        character strings to represent components of the tag such as the
+        < (&lt;) and the > (&gt;) symbols.
+    -->
+    <h3>List Tags: &lt;ol&gt; and &lt;ul&gt;</h3>
+<!--
+    block tag
+    create an ordered list (numbered) using <ol>
+    create an unordered list (bulleted)using <ul>
+    items in the list are indicated using the line <li>        
+-->
+<ol>
+        <li>Add extensiom Live Server for Go Live execution from vsc</li>
+        <li>Open extension using 5 icon on left by menu</li>
+        <li>either search for Live Server or select if seen in list</li>
+        <li>press install</li>
+        <li>To use
+            <ol>
+                <li>open an html page</li>
+                <li>Make any adjustments</li>
+                <li>Save adjustments</li>
+                <li>look to bottom right on blue status line for Go Live and press</li>
+                <li>Make additional adjustment, save and return to browser to see updates</li>
+            </ol>
+        </li>
+</ol>
+<ul>
+<li>this is an unordered list</li>
+<li>default display is a bulleted list</li>
+<li>we will see later how to remove these bullets using css styling</li>
+</ul>
+
+    <h3>Anchor Tag (a.k.a. linking to another page)</h3>
+    <!-- blocked paired
+        This is an anchor tag and is incorrectly often referred to as the link tag/
+        One should not use the link tage because there is actually a <link> used in the <head> section
+        The anchor tag can take you to a different location whether is be on a different website, 
+        different page in the current web site or a different location on the current page.
+
+        parameters:
+        href: points to the desired location
+        target: indicates the browser page display option
+        default is same display page tab
+        _blank will open a new browser tab (page)
+    -->
+    <a href="https://www.nait.ca">go to Nait</a>
+
+    <h3>Image Tag</h3>
+    <!--
+    an empty (void) tag
+    image tag does not have a closing tag
+    the image tag has no content, however it does have parameters
+
+    parameters:
+    src="relative web site location"
+    alt="printable text if the image is not found at src"
+    [title="tool tip text for the image"]
+    
+    Absolute Adressing is a complete fixed file path
+        drive:/folder/...../folder/filename.ext
+
+    relative address begins at a specific point for web sites, it is the "top of the web site"
+    reference to the desired filename is done by specifying the appropriate folder path to the desired file
+    NO DRIVE
+
+    Movement with a relative address
+    - if only the filename is given, the location is within the same folder
+    - movement down the file structure is by /foldername
+    - movement up the file structure is by using .. for each folder level to ascend
+
+    same folder
+    ="filename.ext"
+
+    lower folder
+    ="nextleveldownfoldername/nextdownfoldername/.../filename.ext"
+
+    from one lower folder to another lower folder on a different branch
+    .. for each level that needs to be ascended
+    ="../../../nextleveldownfoldername/filename.ext"
+-->
+<img src="img/photoshop.png" alt="logo photoshop" 
+title="a logo image of photoshop">
+
+<!--
+    combine the anchor tag and the image tag as the anchor tag content
+
+-->
+<a href="http://www.adobe.com" target="_blank">
+<img src="img/photoshop.png" alt="logo photoshop" 
+title="a logo image of photoshop" style="width: 80px; height: 80px"></a>
 </body>
 </html>
